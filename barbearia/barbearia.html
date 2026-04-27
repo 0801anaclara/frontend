@@ -12,14 +12,14 @@
         }
 
         header {
-            background: #ffffff;
+            background:  #ffffff;
             background: linear-gradient(0deg, rgb(226, 112, 156) 0%, rgb(255, 240, 255) 100%);
             width: 100%;
             height: 10%;
         }
 
         h1 {
-            color: rgb(0, 0, 0);
+            color:  rgb(0, 0, 0);
             font-family: arial;
             font-size: 100%;
             font-weight: bold;
@@ -35,7 +35,7 @@
         }
 
         main {
-            background-color: rgb(250, 198, 234);
+            background-color:rgb(250, 198, 234);
             width: 100%;
             height: 80%;
         }
@@ -52,13 +52,76 @@
             background-repeat: no-repeat;
             margin-left: 50%;
         }
+
+        .menu_principal {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu_principal>li {
+            position: relative;
+        }
+
+        .menu_principal a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .dropdown,
+        .menu {
+            display: none;
+            /* Esconde os submenus */
+            position: absolute;
+            background-color: white;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #ccc;
+            min-width: 150px;
+            z-index: 1000;
+        }
+
+        .menu_principal>li:hover>.dropdown {
+            display: block;
+            /* Mostra o menu dropdown quando passa o mouse */
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown>li {
+            position: relative;
+        }
+
+        .dropdown>li:hover>.menu {
+            display: block;
+            /* Mostra o submenu dentro do dropdown */
+            top: 0;
+            left: 100%;
+        }
+
+        .dropdown li,
+        .menu li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Estilize quando o item está sendo hover */
+        .dropdown li:hover,
+        .menu li:hover {
+            background-color: #f0f0f0;
+        }
     </style>
 </head>
 
 <body>
- <header>
-        <h1>BARBEARIA DA ANINHA</h1>
-        <h5>Te deixando bonitinho desde 2010</h5>
+    <header>
+        <h1>BARBEARIA DO 2°A</h1>
+        <h5>Te deixando bonitinho desde 1974</h5>
         <ul class="menu_principal">
             <li>
                 <a href="">Home</a>
@@ -107,7 +170,7 @@
     </header>
     <main>
         <div class="conteudo">
-            <h1>BARBEARIA DA ANINHA</h1>
+            <h1>BARBEARIA DO 2ºA</h1>
         </div>
         <div class="fotoHome"></div>
     </main>
